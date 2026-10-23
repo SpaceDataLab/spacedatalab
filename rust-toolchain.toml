@@ -1,0 +1,7 @@
+# Pinned to the toolchain spacelab's gate uses, not `stable`: `cargo clippy -- -D warnings` is a gate,
+# and a gate whose verdict depends on the date is not one. Bump it with spacelab's, in the same step
+# as the `toolchain:` input in .github/workflows/ci.yml. `rust-version` in Cargo.toml is the MSRV, a
+# separate promise.
+[toolchain]
+channel = "1.99.1"
+components = ["rustfmt", "clippy"]

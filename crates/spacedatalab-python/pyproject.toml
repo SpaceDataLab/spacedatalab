@@ -1,0 +1,48 @@
+[build-system]
+requires = ["maturin>=1.9,<2"]
+build-backend = "maturin"
+
+[project]
+# The organisation's Python entry point, for distribution and import alike: its top level is the
+# spacelab core, and later SpaceDataLab products arrive as submodules. A top-level `spacelab`
+# would also collide with another project's package of that name.
+name = "spacedatalab"
+description = "SpaceDataLab's Python entry point: the spacelab astrodynamics core, verified against independent references"
+readme = "README.md"
+# The version is the workspace's, read by maturin: the crate `spacedatalab` and this wheel move together.
+dynamic = ["version"]
+requires-python = ">=3.11"
+license = { text = "MIT OR Apache-2.0" }
+keywords = ["astrodynamics", "orbit", "sgp4", "gnss", "space"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: MacOS",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Rust",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Programming Language :: Python :: 3.15",
+    "Programming Language :: Python :: Free Threading :: 3 - Stable",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Topic :: Scientific/Engineering :: Astronomy",
+    "Topic :: Scientific/Engineering :: Physics",
+]
+
+[project.urls]
+Homepage = "https://spacedatalab.org"
+Repository = "https://github.com/SpaceDataLab/spacedatalab"
+Changelog = "https://github.com/SpaceDataLab/spacedatalab/releases"
+Issues = "https://github.com/SpaceDataLab/spacedatalab/issues"
+"spacelab core" = "https://github.com/SpaceDataLab/spacelab"
+
+[tool.maturin]
+manifest-path = "Cargo.toml"
+module-name = "spacedatalab"
+features = ["pyo3/extension-module"]

@@ -1,0 +1,33 @@
+[package]
+name = "spacedatalab-python"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+description = "The `spacedatalab` Python module: SpaceDataLab's products in one wheel, the spacelab core at its top level"
+repository.workspace = true
+homepage.workspace = true
+authors.workspace = true
+# Its distribution channel is PyPI, as the `spacedatalab` wheel: a crate that is only a CPython module
+# has no consumer on a Rust registry.
+publish = false
+
+[lib]
+name = "spacedatalab_python"
+crate-type = ["cdylib"]
+# The module is one call per product; what tests it is each product's own Python suite, run against
+# the built wheel by `.github/workflows/wheels.yml`.
+test = false
+doctest = false
+
+# No `[lints]` with `unsafe_code = "forbid"`, unlike `spacedatalab`: the module-init macro needs it.
+
+[dependencies]
+spacelab-python = "0.2"
+# The wheel's two stable ABIs, chosen by the interpreter maturin builds against: `cp311-abi3` from
+# 3.11, and from 3.15 `cp315-abi3.abi3t` (PEP 803), which also loads on the free-threaded build.
+pyo3 = { version = "0.30", features = ["abi3-py311", "abi3t-py315"] }
+
+[features]
+# Cloud-mask ONNX inference through tract: off, so the standard wheel stays lean.
+onnx = ["spacelab-python/onnx"]

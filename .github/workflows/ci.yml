@@ -1,0 +1,85 @@
+name: ci
+
+# The umbrella's checks against the spacelab crates on crates.io: fmt, clippy, tests and docs for the
+# crate, the MSRV, and one Linux wheel run through spacelab's own Python suites. Every platform and
+# interpreter is wheels.yml's. Push and pull request start it: standard runners cost nothing on a
+# public repository, and this workflow runs for minutes, not hours.
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  CARGO_TERM_COLOR: always
+  RUSTFLAGS: -D warnings
+
+jobs:
+  rust:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      # Pinned in two places on purpose, as spacelab does: rust-toolchain.toml and this input name
+      # the same version, so either winning gives the same compiler.
+      - uses: dtolnay/rust-toolchain@master
+        with:
+          toolchain: "1.99.1"
+          components: rustfmt, clippy
+      - uses: Swatinem/rust-cache@v2
+      - run: cargo fmt --all -- --check
+      - run: cargo clippy --workspace --all-targets --all-features --locked -- -D warnings
+      - run: cargo test --workspace --all-features --locked
+      # Default features and all of them: an intra-doc link to a module behind a feature breaks only
+      # the first.
+      - run: cargo doc --no-deps -p spacedatalab --locked
+        env:
+          RUSTDOCFLAGS: -D warnings
+      - run: cargo doc --no-deps -p spacedatalab --features full --locked
+        env:
+          RUSTDOCFLAGS: -D warnings
+
+  msrv:
+    runs-on: ubuntu-latest
+    env:
+      RUSTUP_TOOLCHAIN: "1.94.0"
+    steps:
+      - uses: actions/checkout@v7
+      - uses: dtolnay/rust-toolchain@master
+        with:
+          toolchain: "1.94.0"
+      - uses: Swatinem/rust-cache@v2
+      - run: cargo check --workspace --all-features --locked
+
+  python:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: dtolnay/rust-toolchain@master
+        with:
+          toolchain: "1.99.1"
+      - uses: Swatinem/rust-cache@v2
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.11"
+      - id: bound
+        name: the spacelab tag this wheel links
+        run: python3 tools/bound-spacelab.py >> "$GITHUB_OUTPUT"
+      - uses: actions/checkout@v7
+        with:
+          repository: SpaceDataLab/spacelab
+          ref: ${{ steps.bound.outputs.tag }}
+          path: spacelab
+      - name: the PyPI README's figure block is spacelab's at that tag
+        run: python3 tools/sync-figures.py --check
+      - name: the abi3 wheel
+        working-directory: crates/spacedatalab-python
+        run: pipx run maturin==1.15.0 build --release --locked -i python3.11 -o dist
+      - name: spacelab's smoke and bindings tests against it
+        run: |
+          python3.11 -m venv /tmp/venv
+          /tmp/venv/bin/pip install crates/spacedatalab-python/dist/*.whl
+          /tmp/venv/bin/python spacelab/crates/spacelab-python/tests/smoke.py
+          /tmp/venv/bin/python spacelab/crates/spacelab-python/tests/bindings.py

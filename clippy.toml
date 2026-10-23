@@ -1,0 +1,2 @@
+# Proper nouns the docs use as words, not code: `doc_markdown` would have them in backticks.
+doc-valid-idents = ["SpaceDataLab", "PyPI", ".."]
