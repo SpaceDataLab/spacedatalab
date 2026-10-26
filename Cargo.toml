@@ -5,7 +5,7 @@ resolver = "3"
 # One version for both entry points: `spacedatalab` on crates.io and the `spacedatalab` wheel on PyPI
 # are released together, from one tag.
 [workspace.package]
-version = "0.2.0"
+version = "0.3.0"
 edition = "2024"
 # The floor the spacelab crates set; their workspace manifest records how it was measured.
 rust-version = "1.94"

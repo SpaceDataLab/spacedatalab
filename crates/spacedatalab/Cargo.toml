@@ -13,31 +13,31 @@ categories = ["aerospace", "aerospace::simulation", "science"]
 authors.workspace = true
 
 [dependencies]
-spacelab = "0.2"
+spacelab = "0.3"
 # `std` for the CIO interpolator. The core is a std crate already, so turning it on costs nothing.
-spacelab-frames = { version = "0.2", features = ["std"] }
+spacelab-frames = { version = "0.3", features = ["std"] }
 
-spacelab-astro = { version = "0.2", optional = true }
-spacelab-astrometry = { version = "0.2", optional = true }
-spacelab-autodiff = { version = "0.2", optional = true }
-spacelab-constellation = { version = "0.2", optional = true }
-spacelab-control = { version = "0.2", optional = true }
-spacelab-coverage = { version = "0.2", optional = true }
-spacelab-earthvision = { version = "0.2", optional = true }
-spacelab-elements = { version = "0.2", optional = true }
-spacelab-ephemeris = { version = "0.2", optional = true }
-spacelab-estimation = { version = "0.2", optional = true }
-spacelab-geomagnetism = { version = "0.2", optional = true }
-spacelab-geometry = { version = "0.2", optional = true }
-spacelab-gnss = { version = "0.2", optional = true }
-spacelab-grid = { version = "0.2", optional = true }
-spacelab-ionosphere = { version = "0.2", optional = true }
-spacelab-ndm = { version = "0.2", optional = true }
-spacelab-propagation = { version = "0.2", optional = true }
-spacelab-sensors = { version = "0.2", optional = true }
-spacelab-signal = { version = "0.2", optional = true }
-spacelab-slr = { version = "0.2", optional = true }
-spacelab-vision = { version = "0.2", optional = true }
+spacelab-astro = { version = "0.3", optional = true }
+spacelab-astrometry = { version = "0.3", optional = true }
+spacelab-autodiff = { version = "0.3", optional = true }
+spacelab-constellation = { version = "0.3", optional = true }
+spacelab-control = { version = "0.3", optional = true }
+spacelab-coverage = { version = "0.3", optional = true }
+spacelab-earthvision = { version = "0.3", optional = true }
+spacelab-elements = { version = "0.3", optional = true }
+spacelab-ephemeris = { version = "0.3", optional = true }
+spacelab-estimation = { version = "0.3", optional = true }
+spacelab-geomagnetism = { version = "0.3", optional = true }
+spacelab-geometry = { version = "0.3", optional = true }
+spacelab-gnss = { version = "0.3", optional = true }
+spacelab-grid = { version = "0.3", optional = true }
+spacelab-ionosphere = { version = "0.3", optional = true }
+spacelab-ndm = { version = "0.3", optional = true }
+spacelab-propagation = { version = "0.3", optional = true }
+spacelab-sensors = { version = "0.3", optional = true }
+spacelab-signal = { version = "0.3", optional = true }
+spacelab-slr = { version = "0.3", optional = true }
+spacelab-vision = { version = "0.3", optional = true }
 
 # One feature per crate, named after the module it adds. A crate whose default leaves `std` off gets
 # it here: this crate is the whole API in one place, not a `no_std` build.

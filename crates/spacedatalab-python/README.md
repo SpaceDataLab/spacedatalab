@@ -39,10 +39,10 @@ is the spacelab core, and later SpaceDataLab products arrive as submodules.
 
 <!-- BEGIN GENERATED FIGURES — tools/gen-figures.py -->
 
-| ![SGP4 against python-sgp4](https://raw.githubusercontent.com/SpaceDataLab/spacelab/v0.2.0/docs/figures/sgp4-reference.png) | ![GCRF to ITRF against ERFA](https://raw.githubusercontent.com/SpaceDataLab/spacelab/v0.2.0/docs/figures/frames-erfa.png) |
+| ![SGP4 against python-sgp4](https://raw.githubusercontent.com/SpaceDataLab/spacelab/v0.3.0/docs/figures/sgp4-reference.png) | ![GCRF to ITRF against ERFA](https://raw.githubusercontent.com/SpaceDataLab/spacelab/v0.3.0/docs/figures/frames-erfa.png) |
 |:--:|:--:|
-| SGP4 against python-sgp4 over 24 h: at most **250 nm** (ISS) and **240 nm** (GPS); 3 % of the samples agree to the bit. Same lineage, so this pins units, epochs and frames. | The CIO chain against ERFA's identical route, 1900–2100: at most **0.012 µas**, 360 nm on the ground. ERFA's matrix route differs by up to 3.7 µas: two formulations of one model, not an error. |
-| ![Brute-force sampling against the event engine](https://raw.githubusercontent.com/SpaceDataLab/spacelab/v0.2.0/docs/figures/access-windows.png) | ![Coverage map with the analytic reach](https://raw.githubusercontent.com/SpaceDataLab/spacelab/v0.2.0/docs/figures/coverage-map.png) |
+| SGP4 against python-sgp4 over 24 h: at most **250 nm** (ISS) and **240 nm** (GPS); 3 % of the samples agree to the bit. Both run Vallado's SGP4, so this pins units, epochs and frames. | The CIO chain against ERFA's identical route, 1900–2100: at most **0.012 µas**, 360 nm on the ground. ERFA's matrix route differs by up to 3.7 µas: two formulations of one model, not an error. |
+| ![Brute-force sampling against the event engine](https://raw.githubusercontent.com/SpaceDataLab/spacelab/v0.3.0/docs/figures/access-windows.png) | ![Coverage map with the analytic reach](https://raw.githubusercontent.com/SpaceDataLab/spacelab/v0.3.0/docs/figures/coverage-map.png) |
 | 108 cells, 24 h: at a 1 s step brute force finds **417 of 417** passes and agrees on coverage to **0.0045 %**; at 600 s it misses 79. The engine needs no step: it brackets every edge and refines it to 1 ms. | The engine's coverage of 10368 cells ends at **71.25°** latitude, the last cell inside the analytic reach of the 5° mask, **71.5°** (dashed). |
 
 <!-- END GENERATED FIGURES -->

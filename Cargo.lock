@@ -553,9 +553,9 @@ checksum = "00d174d5400e5e8fd687ad1049e2f578285fa914201b1af7e8b112a4546bd826"
 
 [[package]]
 name = "erased-serde"
-version = "0.4.10"
+version = "0.4.11"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d2add8a07dd6a8d93ff627029c51de145e12686fbc36ecb298ac22e74cf02dec"
+checksum = "1e59b668157f32d3459d4bd634861a06ffa2503a461ca5f0916b9f0252605e66"
 dependencies = [
  "serde",
  "serde_core",
@@ -1345,9 +1345,9 @@ checksum = "9f7c3e4beb33f85d45ae3e3a1792185706c8e16d043238c593331cc7cd313b50"
 
 [[package]]
 name = "ordered-float"
-version = "5.5.0"
+version = "5.5.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8c7c9e0d9b23589f26070720bac724174bfec1083e82f7854cdd0267518343c0"
+checksum = "7f59006ce1e204c30956638535b74d317bca99477b9356dfaec54c37f6f600ab"
 dependencies = [
  "num-traits",
 ]
@@ -2038,13 +2038,13 @@ dependencies = [
 
 [[package]]
 name = "sofars"
-version = "0.6.1"
+version = "0.6.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5dd1c9b1b5d34e1e949deb0dac9ad612e20746c59eaa737e52fd29703c19ec5c"
+checksum = "d30f9231a5523c34c7607376fd3ab7bf1fd8ea03d68893a335fd63decc0e05f6"
 
 [[package]]
 name = "spacedatalab"
-version = "0.2.0"
+version = "0.3.0"
 dependencies = [
  "spacelab",
  "spacelab-astro",
@@ -2073,7 +2073,7 @@ dependencies = [
 
 [[package]]
 name = "spacedatalab-python"
-version = "0.2.0"
+version = "0.3.0"
 dependencies = [
  "pyo3",
  "spacelab-python",
@@ -2081,9 +2081,9 @@ dependencies = [
 
 [[package]]
 name = "spacelab"
-version = "0.2.0"
+version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "72c95499b34276b01e4b9cd34e5bc9e1e0face3e9b032b12580695d2a4565000"
+checksum = "9f2869d4e9e75577882b61fa09d38791262aebeaa50ecb9c3c1aad04327500c6"
 dependencies = [
  "spacelab-core",
  "spacelab-earth",
@@ -2095,9 +2095,9 @@ dependencies = [
 
 [[package]]
 name = "spacelab-astro"
-version = "0.2.0"
+version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "bc11dc37229d79e696f26003d023cc0d35fc390710c3798d3d3fd7edee1b2693"
+checksum = "d04c3c967bd0dc8163294c21ec8ba0075d5c36310f506e9573a61568d37fbfa5"
 dependencies = [
  "libm",
  "spacelab-core",
@@ -2105,9 +2105,9 @@ dependencies = [
 
 [[package]]
 name = "spacelab-astrometry"
-version = "0.2.0"
+version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "771a7552111952e3a9d54f8ce0ea612739c505e029755605b6464911ff8af64a"
+checksum = "f505e0efbd7df3a173d4bfcc93249905f62671429bd2f89474e79d8c26279d3c"
 dependencies = [
  "libm",
  "spacelab-core",
@@ -2116,18 +2116,18 @@ dependencies = [
 
 [[package]]
 name = "spacelab-autodiff"
-version = "0.2.0"
+version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6318c0281a02e9e0d9427a0fc31eb9ff7d7df197319d0e8243dcb58d0c63e22e"
+checksum = "a3aa3dd2a7f6da8b39f6c231a5f2039e2d2b3fdd8b0494abaaf3ca8f60a97533"
 dependencies = [
  "libm",
 ]
 
 [[package]]
 name = "spacelab-constellation"
-version = "0.2.0"
+version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5a398d2cac598f99876a3e91d160ca71690a87da5fd27e5176b7cb2c38db1266"
+checksum = "392418b771cb932240311bae220b7112d80dc415edb6c18bfd44c4b0d6648bd5"
 dependencies = [
  "libm",
  "spacelab-core",
@@ -2136,9 +2136,9 @@ dependencies = [
 
 [[package]]
 name = "spacelab-control"
-version = "0.2.0"
+version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f7c1923a1e5383a0d62ada2479fc6395605f65e56d0bd5faff5baefd04ef4b9d"
+checksum = "88bddc2acd62948c7d2b146ba4753f574577f51647e354fd697b3ec458def6a0"
 dependencies = [
  "libm",
  "spacelab-propagation",
@@ -2146,18 +2146,18 @@ dependencies = [
 
 [[package]]
 name = "spacelab-core"
-version = "0.2.0"
+version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b40d5ba0be5a9f615bc7221d69d0d94aad20fb39a6db73725abf4054337e0aa7"
+checksum = "12164d168652e8cd598d37f1a4a0533bb5fb81602f12096f38a012564845456b"
 dependencies = [
  "libm",
 ]
 
 [[package]]
 name = "spacelab-coverage"
-version = "0.2.0"
+version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "19622149dc6912d2ffb7e25289707e7c8d1822376674e34039e989c9124cb02d"
+checksum = "27a1929110f6a69d0b32c78e060fb0ed70adfc528e2c7ba213425e61b9479383"
 dependencies = [
  "libm",
  "spacelab-core",
@@ -2166,9 +2166,9 @@ dependencies = [
 
 [[package]]
 name = "spacelab-earth"
-version = "0.2.0"
+version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ed7bf8141c408d8fdcb8a2f5f58d7dd3501481f1b97bde16ebb62e102046af62"
+checksum = "cfbd02800326e5be8886d8de00277f2cf4de31ee474878370cee269e0eac3374"
 dependencies = [
  "libm",
  "spacelab-core",
@@ -2177,9 +2177,9 @@ dependencies = [
 
 [[package]]
 name = "spacelab-earthvision"
-version = "0.2.0"
+version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3e77b85661bbe6c84c515379ecb7b26bf10182ffc26d1136282837934b8d9155"
+checksum = "1e8482fb379a63bf4b27eed206870212763101081812fbd1a3ee4d038c1a3c19"
 dependencies = [
  "libm",
  "spacelab-core",
@@ -2188,9 +2188,9 @@ dependencies = [
 
 [[package]]
 name = "spacelab-elements"
-version = "0.2.0"
+version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e935407ca49460895379f668b8dcf8b09898fa1a0467a74508bfd3ee526f038c"
+checksum = "6ee82e5da6051767d745ca5fc66f7a341383e25bd6e86c35818b7e3a8347c847"
 dependencies = [
  "libm",
  "spacelab-core",
@@ -2198,18 +2198,18 @@ dependencies = [
 
 [[package]]
 name = "spacelab-eop"
-version = "0.2.0"
+version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7cb72cf3a4ad3c28b711a1b401702f5f33a453bef43118d50b79fb0e1fb30407"
+checksum = "1900f41f89a21aee8b894221d043f934b376f88059f8fc877977d489246d8f4e"
 dependencies = [
  "spacelab-core",
 ]
 
 [[package]]
 name = "spacelab-ephemeris"
-version = "0.2.0"
+version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ab0289e5221438f5c10b782c6c537984681b2183a5f9753b811ec3aa804a7b34"
+checksum = "9a4379a0338ba535c36e2820b1ae33c4623c94e5cbcb947d7d47e6b0b62085e0"
 dependencies = [
  "anise",
  "spacelab-core",
@@ -2218,9 +2218,9 @@ dependencies = [
 
 [[package]]
 name = "spacelab-estimation"
-version = "0.2.0"
+version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "2db01cc0334048bc81f942d1830ff0bb1198aad5b56eac4db04cb91e53300a4e"
+checksum = "1b0f45f0ff1a7709f26ba437963f0df8b76ab797f883112ad22a0c2c34b29b50"
 dependencies = [
  "libm",
  "spacelab-autodiff",
@@ -2228,9 +2228,9 @@ dependencies = [
 
 [[package]]
 name = "spacelab-fa"
-version = "0.2.0"
+version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "22ed1bb4b4f99329aa5dfebbcef57a729bda6dc1b19f15678bbcf54fb9e99ed3"
+checksum = "8c1ac2de62e1a4d93e05fb3526d64ed44abf136779d669883bd782d929a6dee1"
 dependencies = [
  "libm",
  "spacelab-core",
@@ -2238,9 +2238,9 @@ dependencies = [
 
 [[package]]
 name = "spacelab-frames"
-version = "0.2.0"
+version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7ae3f341649573c51484269f1220635c23ee321e1ae84d745a8eb415bb0220b2"
+checksum = "a1b0fc529caf876739c7bda76f1fe4b2bf704316f4263e1387b778fb849cd5dc"
 dependencies = [
  "libm",
  "spacelab-core",
@@ -2249,38 +2249,39 @@ dependencies = [
 
 [[package]]
 name = "spacelab-geomagnetism"
-version = "0.2.0"
+version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "65f472d7413d36de38d68bc54e1e0bb8cf6f7c0c563c7814dc6265d26252de17"
+checksum = "138ccf50995002363b4e835d5ac068c5dcc5098feacce0475c284e8a98476803"
 dependencies = [
  "libm",
 ]
 
 [[package]]
 name = "spacelab-geometry"
-version = "0.2.0"
+version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "2631f8d5352a34999c67014b5a7f9735df8bc864eade6cc346225b3bded85b33"
+checksum = "d5e5f468743f586e66cc3054bead6805e36e8fb449d14e375da3444d1a2dc7ca"
 dependencies = [
  "libm",
 ]
 
 [[package]]
 name = "spacelab-gnss"
-version = "0.2.0"
+version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1439f88e30a77fba2975ab29004b4c5417cd1fe181bb99095357c9820adc3de7"
+checksum = "6813301d52fc76dbd0d9903e9202add019fd49140f4abd0c34b9249504a51b50"
 dependencies = [
  "libm",
  "spacelab-autodiff",
+ "spacelab-core",
  "spacelab-geomagnetism",
 ]
 
 [[package]]
 name = "spacelab-grid"
-version = "0.2.0"
+version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d74ab0258c33a352d594283e4700ff4df9326c60af0ca665a370d6ed88d4a7d4"
+checksum = "5b07d712f9ba2e676685982a761bf0b7e3b4e4bf599d7e58eb6a5391d1d08202"
 dependencies = [
  "h3o",
  "spacelab-core",
@@ -2290,27 +2291,27 @@ dependencies = [
 
 [[package]]
 name = "spacelab-ionosphere"
-version = "0.2.0"
+version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "df48595f78e381a041f230a240c1e7023af227987dd63804b50104d59b6e64e4"
+checksum = "e44fa93419c5bc41df9e6bba1ff06546aa72d6eeba9ce1388fb79f469406186d"
 dependencies = [
  "libm",
 ]
 
 [[package]]
 name = "spacelab-ndm"
-version = "0.2.0"
+version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "94296858cc39ebc577e0397d8ec6197545309ddd46835052023b1bc1f9e8e163"
+checksum = "e84fa9d749947c0e3b4f2fc6da417818fdb86aefe046ed0c250c1813b6259ca1"
 dependencies = [
  "spacelab-core",
 ]
 
 [[package]]
 name = "spacelab-propagation"
-version = "0.2.0"
+version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ac4dcad0cd61257a531e068f470e8e41f9be9b212674febd3f1f2add4c37c328"
+checksum = "94c25a7b00d10408c573dbcbfadfd65fd1581719d5fd722fc2c5bae0544645c1"
 dependencies = [
  "libm",
  "spacelab-autodiff",
@@ -2321,9 +2322,9 @@ dependencies = [
 
 [[package]]
 name = "spacelab-python"
-version = "0.2.0"
+version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "86d46c64957062282a32e24b1aa72aa480bdc9128749040edc17e82167140b7f"
+checksum = "43c39cd7f09efe50cf7c2670f96d8aa4e9a0285b8d85a2663e3d41a8711dcf28"
 dependencies = [
  "pyo3",
  "spacelab-astro",
@@ -2352,9 +2353,9 @@ dependencies = [
 
 [[package]]
 name = "spacelab-sensors"
-version = "0.2.0"
+version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "063f95ad98cc7349075ecaff25bd888e5f0f95497c4ad75cd5d50ff8fe45ee37"
+checksum = "e41d5559d723539a7d483f15a914830cc1631ed323bca9512e88b8f9881e0e78"
 dependencies = [
  "libm",
  "spacelab-core",
@@ -2362,9 +2363,9 @@ dependencies = [
 
 [[package]]
 name = "spacelab-sgp4"
-version = "0.2.0"
+version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3abd2d40d15ed944b09121e714adcde8ff54fac50ec12150abe22d4e646afd94"
+checksum = "771bd2273c9c285e2a3191c1196e7edbdd621f66a6f96f0e9dcfc7f9752ef742"
 dependencies = [
  "sgp4",
  "spacelab-core",
@@ -2374,27 +2375,27 @@ dependencies = [
 
 [[package]]
 name = "spacelab-signal"
-version = "0.2.0"
+version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f1350a0ca51adb3a4960615c30829ae68590c88123527dc22908494d2907291c"
+checksum = "598d0ec22c7dc9c3eee0a6f67d471f10696b476fc1350814582903889428b1c1"
 dependencies = [
  "libm",
 ]
 
 [[package]]
 name = "spacelab-slr"
-version = "0.2.0"
+version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5b04ef8bc5e35a51ad3d2351fde3fa0387f56fe352056103a8d29381709c3bd0"
+checksum = "c880f8535e5d4601f98a7aa263330dfcf1d540122b40cc6ea36ba468b3977abf"
 dependencies = [
  "libm",
 ]
 
 [[package]]
 name = "spacelab-vision"
-version = "0.2.0"
+version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6668b7270a7da5295e88e8833e0c61a35cb9fabe33cd23f14a60e733e41455ce"
+checksum = "23120329473d6dab88c0b4903b687386963fd052769b22133208cee14b48e263"
 dependencies = [
  "libm",
  "tract-onnx",
