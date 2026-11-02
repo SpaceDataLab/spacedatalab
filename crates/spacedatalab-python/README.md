@@ -16,9 +16,9 @@
 
 > **Python bindings for [spacelab](https://github.com/SpaceDataLab/spacelab), astrodynamics in
 > Rust with the verification as the deliverable.** SGP4, numerical and semi-analytical propagation,
-> GNSS, orbit determination, coverage and constellation design, Earth observation and SAR. Every
-> number is checked against a lineage that did not come from the project, and each check is written
-> down with its oracle and residual. One abi3 wheel per platform, no runtime dependencies.
+> GNSS, orbit determination, coverage and constellation design, Earth observation and SAR.
+> Mathematics decides what is correct, every check is written down with its residual, and other
+> codes are comparisons, never the proof. One abi3 wheel per platform, no runtime dependencies.
 
 ```sh
 pip install spacedatalab
@@ -35,7 +35,7 @@ r, v = sdl.sgp4_propagate(l1, l2, 0.0)  # TEME position (m) and velocity (m/s)
 `spacedatalab` is the Python entry point of [SpaceDataLab](https://spacedatalab.org): its top level
 is the spacelab core, and later SpaceDataLab products arrive as submodules.
 
-## Checked against independent references
+## What it is compared against
 
 <!-- BEGIN GENERATED FIGURES — tools/gen-figures.py -->
 

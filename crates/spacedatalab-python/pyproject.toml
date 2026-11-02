@@ -7,7 +7,7 @@ build-backend = "maturin"
 # spacelab core, and later SpaceDataLab products arrive as submodules. A top-level `spacelab`
 # would also collide with another project's package of that name.
 name = "spacedatalab"
-description = "SpaceDataLab's Python entry point: the spacelab astrodynamics core, verified against independent references"
+description = "SpaceDataLab's Python entry point: the spacelab astrodynamics core, with the verification as the deliverable"
 readme = "README.md"
 # The version is the workspace's, read by maturin: the crate `spacedatalab` and this wheel move together.
 dynamic = ["version"]
