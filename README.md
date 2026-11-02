@@ -12,8 +12,8 @@
 
 > **SpaceDataLab's entry points, one per language.** Each product keeps its own name and repository;
 > this one puts them behind a single dependency. Today that is
-> [spacelab](https://github.com/SpaceDataLab/spacelab), astrodynamics in Rust organised around
-> independent verification.
+> [spacelab](https://github.com/SpaceDataLab/spacelab), astrodynamics in Rust with the verification
+> as the deliverable.
 
 ```sh
 pip install spacedatalab        # then: import spacedatalab
